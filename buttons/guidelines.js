@@ -5,6 +5,7 @@ module.exports = {
 
     return interaction.reply({
   "flags": 32768,
+  "ephemeral": true,
   "components": [
     {
       "type": 17,

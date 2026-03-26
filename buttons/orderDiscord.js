@@ -142,7 +142,7 @@ module.exports = {
               "type": 1,
               "components": [
                 {
-                  "style": 3,
+                  "style": 2,
                   "type": 2,
                   "label": "Claim",
                   "flow": {

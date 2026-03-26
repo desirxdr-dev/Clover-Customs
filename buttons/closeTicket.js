@@ -1,4 +1,5 @@
 const discordTranscripts = require("discord-html-transcripts");
+const { PermissionFlagsBits } = require("discord.js");
 
 const staffRoleId = "1486541375221665963";
 const LOG_CHANNEL_ID = "1486552026996408574";
@@ -7,12 +8,10 @@ module.exports = {
   customId: "close_ticket",
 
   async execute(interaction) {
-const { PermissionFlagsBits } = require("discord.js");
-
-if (
-  !interaction.member.roles.cache.has(staffRoleId) &&
-  !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
-) {
+    if (
+      !interaction.member.roles.cache.has(staffRoleId) &&
+      !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
+    ) {
       return interaction.reply({
         content: "<:CC_xMark:1486569218789871626> You do **not** have **permission** to use this button.",
         ephemeral: true
@@ -57,17 +56,17 @@ if (
               type: 17,
               components: [
                 { type: 10, content: "# Ticket Transcript" },
-                { type: 14 },
+                { type: 14, divider: true, spacing: 1 },
                 {
                   type: 10,
                   content: `Channel Name: ${channel.name}\nChannel ID: ${channel.id}`
                 },
-                { type: 14 },
+                { type: 14, divider: true, spacing: 1 },
                 {
                   type: 10,
                   content: `Opened By: ${openedBy}\nClosed By: ${closedBy}`
                 },
-                { type: 14 },
+                { type: 14, divider: true, spacing: 1 },
                 { type: 10, content: "**Transcript**" },
                 {
                   type: 13,

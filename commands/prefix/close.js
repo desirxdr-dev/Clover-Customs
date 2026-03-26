@@ -9,18 +9,17 @@ module.exports = {
     const LOG_CHANNEL_ID = "1486552026996408574";
 
     // only allow in ticket channels
+    if (!message.channel.topic || !message.channel.topic.startsWith("ticket-")) {
+      return message.reply("<:CC_xMark:1486569218789871626> This channel is **not** a **ticket**.");
+    }
 
-// only allow in ticket channels
-if (!message.channel.topic || !message.channel.topic.startsWith("ticket-")) {
-  return message.reply("<:CC_xMark:1486569218789871626> This channel is **not** a **ticket**.");
-}
+    // get ticket owner
+    let openedBy = "Unknown";
+    if (message.channel.topic?.startsWith("ticket-")) {
+      const id = message.channel.topic.replace("ticket-", "");
+      openedBy = `<@${id}>`;
+    }
 
-// get ticket owner
-let openedBy = "Unknown";
-if (message.channel.topic?.startsWith("ticket-")) {
-  const id = message.channel.topic.replace("ticket-", "");
-  openedBy = `<@${id}>`;
-}
     // permission check
     if (
       !message.member.roles.cache.has(STAFF_ROLE_ID) &&
@@ -48,9 +47,6 @@ if (message.channel.topic?.startsWith("ticket-")) {
         const channelId = message.channel.id;
         const closedBy = message.author;
 
-        // get ticket owner from topic
-
-
         // send log
         if (logChannel) {
           await logChannel.send({
@@ -65,21 +61,27 @@ if (message.channel.topic?.startsWith("ticket-")) {
                     content: "# Ticket Transcript"
                   },
                   {
-                    type: 14
+                    type: 14,
+                    divider: true,
+                    spacing: 1
                   },
                   {
                     type: 10,
                     content: `Channel Name: ${channelName}\nChannel ID: ${channelId}`
                   },
                   {
-                    type: 14
+                    type: 14,
+                    divider: true,
+                    spacing: 1
                   },
                   {
                     type: 10,
                     content: `Opened By: ${openedBy}\nClosed By: ${closedBy}`
                   },
                   {
-                    type: 14
+                    type: 14,
+                    divider: true,
+                    spacing: 1
                   },
                   {
                     type: 10,
@@ -93,6 +95,7 @@ if (message.channel.topic?.startsWith("ticket-")) {
                   },
                   {
                     type: 14,
+                    divider: true,
                     spacing: 2
                   },
                   {

@@ -5,7 +5,7 @@ const {
 
 const HR_ROLE_ID = "1486541358398308485";
 
-const ORDER_TYPES = {
+const ORDER_TYPE = {
   discord: {
     categoryId: "1486624372834828350",
     staffRoleIds: ["1486623381351698502"],
@@ -18,7 +18,7 @@ module.exports = {
   customId: ORDER_TYPE.buttonId,
 
   async execute(interaction) {
-    const config = ORDER_TYPES;
+    const config = ORDER_TYPE;
     const user = interaction.user;
     const guild = interaction.guild;
 

@@ -34,7 +34,7 @@ module.exports = {
     }
 
     const ticketChannel = await guild.channels.create({
-      name: `🔴-unclaimed`.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 24),
+      name: `🔴-unclaimed`,
       type: ChannelType.GuildText,
       parent: config.categoryId,
       topic: `ticket-${user.id}`,

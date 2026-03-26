@@ -13,7 +13,7 @@ module.exports = {
 
       await guild.members.fetch();
 
-      client.user.setActivity(`${guild.memberCount} members`, {
+      client.user.setActivity(`Watching ${guild.memberCount} Members`, {
         type: ActivityType.Watching
       });
     };

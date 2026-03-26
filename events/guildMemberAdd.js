@@ -13,7 +13,7 @@ module.exports = {
       );
     }
 
-    client.user.setActivity(`${member.guild.memberCount} members`, {
+    client.user.setActivity(`Watching ${member.guild.memberCount} Members`, {
       type: ActivityType.Watching
     });
   }

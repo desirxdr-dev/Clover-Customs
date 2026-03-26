@@ -114,7 +114,7 @@ module.exports = {
     await designer.send("<:CC_arrow:1486608622669791372> A customer **review** has been **submitted** for an order you recently completed.")
 
     await interaction.reply({
-      content: "<:CC_check:1486569243884650606> Successfully **sent** review.",
+      content: "<:CC_check:1486569243884650606> **Successfully** sent review.",
       ephemeral: true
     });
   }

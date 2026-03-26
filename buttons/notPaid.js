@@ -12,22 +12,27 @@ module.exports = {
     ) {
       return interaction.reply({
         content: "<:CC_xMark:1486569218789871626> You do **not** have **permission** to use this button.",
-        ephemeral: true
+        flags: 64
       });
     }
 
-    // get original message components
-    const original = interaction.message.components;
+    const updated = JSON.parse(JSON.stringify(interaction.message.components));
 
-    // clone and modify button
-    const updated = JSON.parse(JSON.stringify(original));
+    for (const component of updated) {
+      if (!component.components) continue;
 
-    const button = updated[0].components.find(c => c.type === 2);
-
-    if (button) {
-      button.label = "Paid";
-      button.style = 3; // green
-      button.disabled = true;
+      for (const child of component.components) {
+        if (
+          child.type === 9 &&
+          child.accessory &&
+          child.accessory.type === 2 &&
+          child.accessory.custom_id === "not_paid"
+        ) {
+          child.accessory.label = "Paid";
+          child.accessory.style = 3;
+          child.accessory.disabled = true;
+        }
+      }
     }
 
     await interaction.update({

@@ -15,10 +15,10 @@ const ORDER_TYPES = {
 };
 
 module.exports = {
-  customId: ORDER_TYPES.development.buttonId,
+  customId: ORDER_TYPE.buttonId,
 
   async execute(interaction) {
-    const config = ORDER_TYPES.development;
+    const config = ORDER_TYPES;
     const user = interaction.user;
     const guild = interaction.guild;
 

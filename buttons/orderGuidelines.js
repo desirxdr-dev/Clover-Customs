@@ -1,9 +1,9 @@
 module.exports = {
-  name: "order",
+  customId: "p_284217804868030470",
 
-  async execute(message) {
-    await message.channel.send({
-      "flags": 32768,
+  async execute(interaction) {
+    await interaction.reply({
+      "flags": 32768 | 64,
       "components": [
         {
           "type": 17,
@@ -13,7 +13,7 @@ module.exports = {
               "items": [
                 {
                   "media": {
-                    "url": "https://media.discordapp.net/attachments/1486558722338852904/1486558908557295636/34.png?ex=69c5f15e&is=69c49fde&hm=f5fb39b1e45513fd7f58e9fa38a39f92d35c1611bb484443a8b3492f1a60d483&=&format=webp&quality=lossless&width=1872&height=642"
+                    "url": "https://media.discordapp.net/attachments/1486558722338852904/1486559044016537701/27.png?ex=69c5f17f&is=69c49fff&hm=65425905736a034bbb1eb83d87e22b42bf6d4e4eaa015ad95c7c121ee6219066&=&format=webp&quality=lossless&width=1872&height=642"
                   }
                 }
               ]
@@ -24,71 +24,31 @@ module.exports = {
             },
             {
               "type": 10,
-              "content": "If you are looking to order at **Clover Customs**, ensure to review our **Order Guidelines** prior to ordering. You can order using the button below."
+              "content": "` #1 ` **Payment Methods**\n- Robux payment is accepted.\n- We do not offer USD payment methods yet."
             },
             {
-              "type": 1,
-              "components": [
-                {
-                  "style": 1,
-                  "type": 2,
-                  "label": "Graphics",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217574709792769"
-                },
-                {
-                  "style": 1,
-                  "type": 2,
-                  "label": "Clothing",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217578547580930"
-                },
-                {
-                  "style": 1,
-                  "type": 2,
-                  "label": "Liveries",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217717286768643"
-                },
-                {
-                  "style": 1,
-                  "type": 2,
-                  "label": "Discord",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217720642211844"
-                },
-                {
-                  "style": 1,
-                  "type": 2,
-                  "label": "Development",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217723913768965"
-                }
-              ]
+              "type": 14,
+              "divider": false
             },
             {
-              "type": 1,
-              "components": [
-                {
-                  "style": 2,
-                  "type": 2,
-                  "label": "Order Guidelines",
-                  "flow": {
-                    "actions": []
-                  },
-                  "custom_id": "p_284217804868030470"
-                }
-              ]
+              "type": 10,
+              "content": "` #2 ` **Payment Before Start**\n- You will be required to pay before your designer starts working on your order.\n- There are no exceptions; 100% payment is expected."
+            },
+            {
+              "type": 14,
+              "divider": false
+            },
+            {
+              "type": 10,
+              "content": "` #3 ` **Queue**\n- There may be a queue when ordering. It is based on a first come first serve bias.\n- You can pay extra to bypass the queue."
+            },
+            {
+              "type": 14,
+              "divider": false
+            },
+            {
+              "type": 10,
+              "content": "` #4 ` **Common Sense**\n- Use your common sense when ordering.\n- Your ticket may be closed for any reason deemed fit.\n- You will **not** be offered a refund if you violate Order Terms and your ticket is closed."
             },
             {
               "type": 14,

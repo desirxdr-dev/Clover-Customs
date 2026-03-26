@@ -7,7 +7,12 @@ module.exports = {
   customId: "close_ticket",
 
   async execute(interaction) {
-    if (!interaction.member.roles.cache.has(staffRoleId)) {
+const { PermissionFlagsBits } = require("discord.js");
+
+if (
+  !interaction.member.roles.cache.has(staffRoleId) &&
+  !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
+) {
       return interaction.reply({
         content: "<:CC_xMark:1486569218789871626> You do **not** have **permission** to use this button.",
         ephemeral: true

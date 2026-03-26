@@ -6,29 +6,37 @@ module.exports = {
 
     const ORDER_CONFIGS = [
       {
-        prefix: "graphics-",
+        categoryId: "1486624103581352036",
         staffRoleIds: ["1486623365010559048"]
       },
       {
-        prefix: "clothing-",
+        categoryId: "1486624190583799949",
         staffRoleIds: ["1486623367821004881"]
       },
       {
-        prefix: "liveries-",
+        categoryId: "1486624241548922890",
         staffRoleIds: ["1486623370639441990"]
       },
       {
-        prefix: "discord-",
+        categoryId: "1486624299149168651",
         staffRoleIds: ["1486623543574790235"]
       },
       {
-        prefix: "development-",
-        staffRoleIds: ["1486623381351698502"]
+        categoryId: "1486624372834828350",
+        staffRoleIds: ["1486623543574790235"]
       }
     ];
 
     const channel = interaction.channel;
-    const match = ORDER_CONFIGS.find(cfg => channel.name.startsWith(cfg.prefix));
+
+    if (!channel.topic || !channel.topic.startsWith("ticket-")) {
+      return interaction.reply({
+        content: "<:CC_xMark:1486569218789871626> This is not a valid order ticket.",
+        flags: 64
+      });
+    }
+
+    const match = ORDER_CONFIGS.find(cfg => channel.parentId === cfg.categoryId);
 
     if (!match) {
       return interaction.reply({

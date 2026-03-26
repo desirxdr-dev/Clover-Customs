@@ -7,23 +7,23 @@ module.exports = {
     const ORDER_CONFIGS = [
       {
         categoryId: "PUT_GRAPHICS_CATEGORY_ID_HERE",
-        staffRoleIds: ["PUT_GRAPHICS_STAFF_ROLE_ID_HERE"]
+        staffRoleIds: ["1486623365010559048"]
       },
       {
         categoryId: "PUT_CLOTHING_CATEGORY_ID_HERE",
-        staffRoleIds: ["PUT_CLOTHING_STAFF_ROLE_ID_HERE"]
+        staffRoleIds: ["1486623367821004881"]
       },
       {
         categoryId: "PUT_LIVERIES_CATEGORY_ID_HERE",
-        staffRoleIds: ["PUT_LIVERIES_STAFF_ROLE_ID_HERE"]
+        staffRoleIds: ["1486623370639441990"]
       },
       {
         categoryId: "PUT_DISCORD_CATEGORY_ID_HERE",
-        staffRoleIds: ["PUT_DISCORD_STAFF_ROLE_ID_HERE"]
+        staffRoleIds: ["1486623543574790235"]
       },
       {
         categoryId: "PUT_DEVELOPMENT_CATEGORY_ID_HERE",
-        staffRoleIds: ["PUT_DEVELOPMENT_STAFF_ROLE_ID_HERE"]
+        staffRoleIds: ["1486623381351698502"]
       }
     ];
 

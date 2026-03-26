@@ -39,7 +39,7 @@ module.exports = {
       name: `🔴-unclaimed`,
       type: ChannelType.GuildText,
       parent: config.categoryId,
-      topic: `discord-${user.id}`,
+      topic: `ticket-${user.id}`,
       permissionOverwrites: [
         {
           id: guild.roles.everyone.id,

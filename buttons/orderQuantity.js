@@ -15,7 +15,7 @@ module.exports = {
 
     const input = new TextInputBuilder()
       .setCustomId("quantity")
-      .setLabel("What quantity do you need?")
+      .setLabel("What is the amount of products you need?")
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 

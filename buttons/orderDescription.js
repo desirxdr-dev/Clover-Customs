@@ -15,7 +15,7 @@ module.exports = {
 
     const input = new TextInputBuilder()
       .setCustomId("description")
-      .setLabel("Describe your order")
+      .setLabel("What do you want to order?")
       .setStyle(TextInputStyle.Paragraph)
       .setRequired(true);
 

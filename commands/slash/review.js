@@ -32,6 +32,17 @@ module.exports = {
 
   async execute(interaction) {
     const REVIEW_CHANNEL_ID = "1486554838908010516";
+    const REQUIRED_ROLE_ID = "1486541481727496294";
+
+        if (
+      !interaction.member.roles.cache.has(REQUIRED_ROLE_ID) &&
+      !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
+    ) {
+      return interaction.reply({
+        content: "<:CC_xMark:1486569218789871626> You must be a **customer** to be able to **use** this command.",
+        ephemeral: true
+      });
+    }
 
 
     const designer = interaction.options.getUser("designer");

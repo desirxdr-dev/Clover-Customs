@@ -65,7 +65,7 @@ module.exports = (client) => {
         });
       } else {
         await interaction.reply({
-          content: "An **error** occured.",
+          content: "<:CC_xMark:1486569218789871626> An **error** occured.",
           ephemeral: true
         });
       }

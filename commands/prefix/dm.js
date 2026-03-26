@@ -4,7 +4,6 @@ const {
   ButtonStyle,
   PermissionsBitField
 } = require("discord.js");
-const db = require('../../db'); // if you need DB; remove if not
 
 module.exports = {
   name: "dm",

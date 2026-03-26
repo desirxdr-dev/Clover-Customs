@@ -42,7 +42,7 @@ module.exports = (client) => {
       await command.execute(message, args, client);
     } catch (error) {
       console.error(error);
-      await message.reply("There was an error while executing that command.");
+      await message.reply("<:CC_xMark:1486569218789871626> An **error** occured.");
     }
   });
 
@@ -60,12 +60,12 @@ module.exports = (client) => {
 
       if (interaction.replied || interaction.deferred) {
         await interaction.followUp({
-          content: "There was an error while executing that command.",
+          content: "<:CC_xMark:1486569218789871626> An **error** occured.",
           ephemeral: true
         });
       } else {
         await interaction.reply({
-          content: "There was an error while executing that command.",
+          content: "An **error** occured.",
           ephemeral: true
         });
       }

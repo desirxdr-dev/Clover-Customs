@@ -45,6 +45,7 @@ module.exports = {
 
       if (logChannel) {
         await logChannel.send({
+          flags: 32768,
           files: [transcript],
           components: [
             {

@@ -10,18 +10,28 @@ module.exports = {
 
     // only allow in ticket channels
 
+// only allow in ticket channels
+if (!message.channel.topic || !message.channel.topic.startsWith("ticket-")) {
+  return message.reply("<:CC_xMark:1486569218789871626> This channel is **not** a **ticket**.");
+}
 
+// get ticket owner
+let openedBy = "Unknown";
+if (message.channel.topic?.startsWith("ticket-")) {
+  const id = message.channel.topic.replace("ticket-", "");
+  openedBy = `<@${id}>`;
+}
     // permission check
     if (
       !message.member.roles.cache.has(STAFF_ROLE_ID) &&
       !message.member.permissions.has("Administrator")
     ) {
-      return message.reply(`${config.EMOJIS.x} You do **not** have permission to **close** this ticket.`);
+      return message.reply(`<:CC_xMark:1486569218789871626> You do **not** have permission to **close** this ticket.`);
     }
 
     const logChannel = message.guild.channels.cache.get(LOG_CHANNEL_ID);
 
-    await message.reply(`${config.EMOJIS.check} *Closing ticket...*`);
+    await message.reply(`<:CC_check:1486569243884650606> **Closing** ticket in 5 seconds...`);
 
     setTimeout(async () => {
 
@@ -39,12 +49,7 @@ module.exports = {
         const closedBy = message.author;
 
         // get ticket owner from topic
-        let openedBy = "Unknown";
 
-        if (message.channel.topic?.startsWith("ticket-owner:")) {
-          const id = message.channel.topic.split(":")[1];
-          openedBy = `<@${id}>`;
-        }
 
         // send log
         if (logChannel) {

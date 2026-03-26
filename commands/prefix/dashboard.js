@@ -69,7 +69,6 @@ module.exports = {
               "style": 5,
               "label": "Roblox Group",
               "url": "https://www.roblox.com/communities/868653117/Clover-Customs-I-Roblox-Group#!/about",
-              "custom_id": "p_284165314248183818"
             }
           ]
         },

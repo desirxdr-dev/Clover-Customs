@@ -6,12 +6,10 @@ const {
 const HR_ROLE_ID = "1486541358398308485";
 
 const ORDER_TYPE = {
-  discord: {
-    categoryId: "1486624372834828350",
-    staffRoleIds: ["1486623381351698502"],
-    buttonId: "p_284217723913768965",
-    label: "Development"
-  }
+  categoryId: "1486623381351698502",
+  staffRoleIds: ["1486624372834828350"],
+  buttonId: "p_284217723913768965",
+  label: "Development"
 };
 
 module.exports = {
@@ -25,7 +23,7 @@ module.exports = {
     const existing = guild.channels.cache.find(
       channel =>
         channel.parentId === config.categoryId &&
-        channel.topic === `development-${user.id}`
+        channel.topic === `ticket-${user.id}`
     );
 
     if (existing) {
@@ -36,10 +34,10 @@ module.exports = {
     }
 
     const ticketChannel = await guild.channels.create({
-      name: `🔴-unclaimed-${user.username}`.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 24),
+      name: `development-${user.username}`.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 24),
       type: ChannelType.GuildText,
       parent: config.categoryId,
-      topic: `development-${user.id}`,
+      topic: `ticket-${user.id}`,
       permissionOverwrites: [
         {
           id: guild.roles.everyone.id,
@@ -96,7 +94,7 @@ module.exports = {
             },
             {
               "type": 10,
-              "content": `Thanks for ordering with **Clover Customs**. Ensure to fill out the **Order Screening** as soon as possible to avoid having your order closed.\n-# ${interaction.user} | <@&1486623365010559048>`
+              "content": "Thanks for ordering with **Clover Customs**. Ensure to fill out the **Order Screening** as soon as possible to avoid having your order closed."
             },
             {
               "type": 14,

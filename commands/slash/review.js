@@ -66,7 +66,7 @@ module.exports = {
       "components": [
         {
           "type": 10,
-          "content": "# New Review\n${designer}"
+          "content":`# New Review\n${designer}`
         },
         {
           "type": 14,
@@ -74,7 +74,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": "${interaction.usre} is the client of this order."
+          "content": `${interaction.user} is the client of this order.`
         },
         {
           "type": 14,
@@ -82,7 +82,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": "**Rating:** ${rating}\n**Feedback:** ${feedback}"
+          "content": `**Rating:** ${rating}\n**Feedback:** ${feedback}`
         },
         {
           "type": 14,

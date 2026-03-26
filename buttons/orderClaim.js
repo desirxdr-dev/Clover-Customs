@@ -6,28 +6,28 @@ module.exports = {
 
     const ORDER_CONFIGS = [
       {
-        prefix: "graphics-",
-        staffRoleIds: ["1486623365010559048"]
+        categoryId: "PUT_GRAPHICS_CATEGORY_ID_HERE",
+        staffRoleIds: ["PUT_GRAPHICS_STAFF_ROLE_ID_HERE"]
       },
       {
-        prefix: "clothing-",
-        staffRoleIds: ["1486623367821004881"]
+        categoryId: "PUT_CLOTHING_CATEGORY_ID_HERE",
+        staffRoleIds: ["PUT_CLOTHING_STAFF_ROLE_ID_HERE"]
       },
       {
-        prefix: "liveries-",
-        staffRoleIds: ["1486623370639441990"]
+        categoryId: "PUT_LIVERIES_CATEGORY_ID_HERE",
+        staffRoleIds: ["PUT_LIVERIES_STAFF_ROLE_ID_HERE"]
       },
       {
-        prefix: "discord-",
-        staffRoleIds: ["1486623543574790235"]
+        categoryId: "PUT_DISCORD_CATEGORY_ID_HERE",
+        staffRoleIds: ["PUT_DISCORD_STAFF_ROLE_ID_HERE"]
       },
       {
-        prefix: "development-",
-        staffRoleIds: ["1486623381351698502"]
+        categoryId: "PUT_DEVELOPMENT_CATEGORY_ID_HERE",
+        staffRoleIds: ["PUT_DEVELOPMENT_STAFF_ROLE_ID_HERE"]
       }
     ];
 
-    const match = ORDER_CONFIGS.find(cfg => channel.name.startsWith(cfg.prefix));
+    const match = ORDER_CONFIGS.find(cfg => channel.parentId === cfg.categoryId);
 
     if (!match) {
       return interaction.reply({
@@ -61,25 +61,12 @@ module.exports = {
       }
     }
 
-    await channel.setName(`🟢-claimed`).catch(() => {});
+    await channel.setName(`🟢-${interaction.user.username}`).catch(() => {});
 
     await interaction.update({
       components: updated
     });
 
-    await channel.send({
-  "flags": 32768,
-  "components": [
-    {
-      "type": 17,
-      "components": [
-        {
-          "type": 10,
-          "content": `*<:CC_check:1486569243884650606> ${interaction.user} has claimed this order.*`
-        }
-      ]
-    }
-  ]
-});
+    await channel.send(`${interaction.user} has **claimed** this order.`);
   }
 };

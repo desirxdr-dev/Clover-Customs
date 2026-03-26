@@ -50,7 +50,7 @@ module.exports = {
           ]
         },
         {
-          id: staffRoleId,
+          id: staffRoleIds,
           allow: [
             PermissionFlagsBits.ViewChannel,
             PermissionFlagsBits.SendMessages,

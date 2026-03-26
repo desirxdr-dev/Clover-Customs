@@ -10,7 +10,7 @@ module.exports = {
       return message.reply("<:CC_xMark:1486569218789871626> You do **not** have **permission** to use this command.");
 
     }
-    await message.reply({
+    await message.channel.send({
   "flags": 32768,
   "components": [
     {

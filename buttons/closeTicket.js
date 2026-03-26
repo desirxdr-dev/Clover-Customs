@@ -70,7 +70,7 @@ module.exports = {
                 { type: 10, content: "**Transcript**" },
                 {
                   type: 13,
-                  file: { url: "attachment://transcript.html" }
+                  file: { url: `attachment://${transcript.name}` }
                 }
               ]
             }

@@ -56,17 +56,17 @@ module.exports = {
               type: 17,
               components: [
                 { type: 10, content: "# Ticket Transcript" },
-                { type: 14, divider: true, spacing: 1 },
+                { type: 14 },
                 {
                   type: 10,
                   content: `Channel Name: ${channel.name}\nChannel ID: ${channel.id}`
                 },
-                { type: 14, divider: true, spacing: 1 },
+                { type: 14 },
                 {
                   type: 10,
                   content: `Opened By: ${openedBy}\nClosed By: ${closedBy}`
                 },
-                { type: 14, divider: true, spacing: 1 },
+                { type: 14 },
                 { type: 10, content: "**Transcript**" },
                 {
                   type: 13,

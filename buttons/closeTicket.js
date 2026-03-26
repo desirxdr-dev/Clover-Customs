@@ -28,7 +28,8 @@ module.exports = {
     }
 
     await interaction.reply({
-      content: "<:CC_check:1486569243884650606> **Closing** ticket in 5 seconds..."
+      content: "<:CC_check:1486569243884650606> **Closing** ticket in 5 seconds...",
+      ephemeral: true
     });
 
     try {

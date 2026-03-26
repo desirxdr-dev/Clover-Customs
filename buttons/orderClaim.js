@@ -27,14 +27,12 @@ module.exports = {
       }
     ];
 
-    const match = ORDER_CONFIGS.find(cfg => channel.parentId === cfg.categoryId);
-
-    if (!match) {
-      return interaction.reply({
-        content: "<:CC_xMark:1486569218789871626> This is not a valid order ticket.",
-        flags: 64
-      });
-    }
+    if (!channel.topic || !channel.topic.startsWith("ticket-")) {
+  return interaction.reply({
+    content: "<:CC_xMark:1486569218789871626> This is not a valid order ticket.",
+    flags: 64
+  });
+}
 
     const hasStaffRole = match.staffRoleIds.some(roleId =>
       interaction.member.roles.cache.has(roleId)

@@ -78,7 +78,7 @@ try {
             items: [
               {
                 media: {
-                  url: "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c568b7&is=69c41737&hm=2e8db25aab9a4698240d0ba9e59dda14a18a30f76bd3eef854e25b10087729a4&=&format=webp&quality=lossless&width=2342&height=120"
+                  url: "https://media.discordapp.net/attachments/1486558722338852904/1486559089571139685/25.png?ex=69c5f189&is=69c4a009&hm=b96edcbdf8c58933c9e7f3664b8ce51248e891e5614b56fc01241cc12f19610b&=&format=webp&quality=lossless"
                 }
               }
             ]
@@ -108,7 +108,7 @@ try {
               items: [
                 {
                   media: {
-                    url: "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c568b7&is=69c41737&hm=2e8db25aab9a4698240d0ba9e59dda14a18a30f76bd3eef854e25b10087729a4&=&format=webp&quality=lossless&width=2342&height=120"
+                    url: "https://media.discordapp.net/attachments/1486558722338852904/1486559089571139685/25.png?ex=69c5f189&is=69c4a009&hm=b96edcbdf8c58933c9e7f3664b8ce51248e891e5614b56fc01241cc12f19610b&=&format=webp&quality=lossless"
                   }
                 }
               ]

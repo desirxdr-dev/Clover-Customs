@@ -88,7 +88,7 @@ module.exports = {
           "components": [
             {
               "type": 10,
-              "content": `**Customer**: ${customer}\n**Amount After Tax**: ${amount}\n**Type**: ${type}\n**Quantity**: ${quantity}\n**Designer Earnings**: ${convertedAmount}`
+              "content": `**Customer**: ${customer}\n**Amount After Tax**: ${amount} Robux\n**Type**: ${type}\n**Quantity**: ${quantity}\n**Designer Earnings**: ${convertedAmount} Robux`
             }
           ],
           "accessory": {

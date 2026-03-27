@@ -31,8 +31,8 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const REVIEW_CHANNEL_ID = "1486554838908010516";
-    const REQUIRED_ROLE_ID = "1486541481727496294";
+    const REVIEW_CHANNEL_ID = "1486902875056767218";
+    const REQUIRED_ROLE_ID = "1486978079766089848";
 
         if (
       !interaction.member.roles.cache.has(REQUIRED_ROLE_ID) &&

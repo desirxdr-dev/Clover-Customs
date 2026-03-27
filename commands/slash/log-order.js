@@ -43,7 +43,19 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const LOG_CHANNEL_ID = "1486557408607207506";
+    const LOG_CHANNEL_ID = "1486901039130087445";
+    const REQUIRED_ROLE_ID = "1477768302058143935";
+
+        if (
+      !interaction.member.roles.cache.has(REQUIRED_ROLE_ID) &&
+      !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
+    ) {
+      return interaction.reply({
+        content: "<:xMark:1486977010143199382> You do **not** have **permission** to run this command.",
+        ephemeral: true
+      });
+    }
+
 
     const customer = interaction.options.getUser("customer");
     const amount = interaction.options.getNumber("amount");

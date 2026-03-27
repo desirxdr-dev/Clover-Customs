@@ -39,7 +39,7 @@ module.exports = {
       !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
     ) {
       return interaction.reply({
-        content: "<:CC_xMark:1486569218789871626> You must be a **customer** to be able to **use** this command.",
+        content: "<:xMark:1486977010143199382> You must be a **customer** to be able to **use** this command.",
         ephemeral: true
       });
     }
@@ -53,7 +53,7 @@ module.exports = {
 
     if (!channel) {
       return interaction.reply({
-        content: "<:CC_xMark:1486569218789871626> Failed to **find** the review channel.",
+        content: "<:xMark:1486977010143199382> Failed to **find** the review channel.",
         ephemeral: true
       });
     }
@@ -101,7 +101,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1486558722338852904/1486559089571139685/25.png?ex=69c5f189&is=69c4a009&hm=b96edcbdf8c58933c9e7f3664b8ce51248e891e5614b56fc01241cc12f19610b&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1486918779668529243/1486964125367275712/image.png?ex=69c76ac1&is=69c61941&hm=e217cbe1c7a65c48a2a7189259d90e304cfa279dd4d1e0d03f40a8f30f5e3107&=&format=webp&quality=lossless"
               }
             }
           ]
@@ -114,7 +114,7 @@ module.exports = {
     await designer.send("<:CC_arrow:1486608622669791372> A customer **review** has been **submitted** for an order you recently completed.")
 
     await interaction.reply({
-      content: "<:CC_check:1486569243884650606> **Successfully** sent review.",
+      content: "<:check:1486976983555379330> **Successfully** sent review.",
       ephemeral: true
     });
   }

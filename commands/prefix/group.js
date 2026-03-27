@@ -12,7 +12,7 @@ await message.reply({
       "components": [
         {
           "type": 10,
-          "content": "*Join our **ROBLOX** group [here](https://www.roblox.com/communities/868653117/Clover-Customs-I-Roblox-Group#!/about)*"
+          "content": "*Join our **ROBLOX** group [here](https://www.roblox.com/communities/863008394/Sea-Courses#!/store)*"
         },
         {
           "type": 1,
@@ -21,7 +21,7 @@ await message.reply({
               "type": 2,
               "style": 5,
               "label": "Link",
-              "url": "https://www.roblox.com/communities/868653117/Clover-Customs-I-Roblox-Group#!/about",
+              "url": "https://www.roblox.com/communities/863008394/Sea-Courses#!/store",
             }
           ]
         }

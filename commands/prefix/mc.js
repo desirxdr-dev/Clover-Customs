@@ -27,7 +27,7 @@ module.exports = {
       "components": [
         {
           "type": 10,
-          "content": `<:CC_members:1486605179292749865> **Member Count**: ${totalMembers}\n<:CC_rocket:1486605204898971738> **Server Boosts**: ${boosts}`
+          "content": `<:members:1486975554543685773> **Member Count**: ${totalMembers}\n<:rocket:1486975593810628758>  **Server Boosts**: ${boosts}`
         }
       ]
     }

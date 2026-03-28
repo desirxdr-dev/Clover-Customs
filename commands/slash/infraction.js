@@ -39,7 +39,7 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const REQUIRED_ROLE_ID = "1471741614463520868";
+    const REQUIRED_ROLE_ID = "1466269101260411013";
 
     // permission check
     if (
@@ -69,7 +69,7 @@ try {
       });
 
       const id = inf.id;
-      const TARGET_CHANNEL_ID = "1470297349006950515"; // change to your channel
+      const TARGET_CHANNEL_ID = "1466343643865551073"; // change to your channel
       const channel = interaction.guild.channels.cache.get(TARGET_CHANNEL_ID);
       if (!channel) return interaction.reply({ content: "<:Sea_xMark:1486977010143199382> Target channel not found.", ephemeral: true });
 

@@ -5,12 +5,12 @@ module.exports = {
 
     const reply = interaction.fields.getTextInputValue("reply_text");
 
-    const LOG_CHANNEL_ID = "1486605913333698560";
+    const LOG_CHANNEL_ID = "1466314007714594856";
     const channel = interaction.client.channels.cache.get(LOG_CHANNEL_ID);
 
     if (!channel) {
       return interaction.reply({
-        content: ":xMark: **Failed** to fetch log channel.",
+        content: "<:Sea_xMark:1486977010143199382> **Failed** to fetch log channel.",
         ephemeral: true
       });
     }
@@ -38,7 +38,7 @@ module.exports = {
     });
 
     await interaction.reply({
-      content: ":check: **Successfully** sent reply.",
+      content: "<:Sea_Check:1486976983555379330> **Successfully** sent reply.",
       ephemeral: true
     });
   }

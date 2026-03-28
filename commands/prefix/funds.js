@@ -17,11 +17,11 @@ module.exports = {
     const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
 
     if (!isAdmin && !hasRole) {
-      return message.reply("<:sea_xMark:1466321094184276041> You do **not** have **permission** to use this command.");
+      return message.reply("<:Sea_xMark:1486977010143199382> You do **not** have **permission** to use this command.");
     }
 
     if (!ROBLOSECURITY || !GROUP_ID) {
-      return message.reply("<:sea_xMark:1466321094184276041> Bot is **not** configured correctly.");
+      return message.reply("<:Sea_xMark:1486977010143199382> Bot is **not** configured correctly.");
     }
 
     const headers = {
@@ -86,7 +86,7 @@ module.exports = {
 
     } catch (error) {
       console.error("FUNDS ERROR:", error.response?.data || error);
-      await message.channel.send("<:sea_xMark:1466321094184276041> Failed to fetch **group** funds.");
+      await message.channel.send("<:Sea_xMark:1486977010143199382> **Failed** to **fetch** group funds.");
     }
   }
 };

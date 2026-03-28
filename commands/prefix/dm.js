@@ -12,26 +12,26 @@ module.exports = {
     if (message.author.bot) return;
 
     const REQUIRED_ROLE_ID = "1470287418971258920";
-const LOG_CHANNEL_ID = "1486605913333698560";
+const LOG_CHANNEL_ID = "1466314007714594856";
 
 const isAdmin = message.member.permissions.has(PermissionsBitField.Flags.Administrator);
 const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
 if (!isAdmin && !hasRole) {
-  return message.reply("<:xMark:1485791953307308223> You do **not** have **permission** to use this command.");
+  return message.reply("<:Sea_xMark:1486977010143199382> You do **not** have **permission** to use this command.");
 }
 
 const userId = args[0];
 const text = args.slice(1).join(" ");
 
 if (!userId || !text) {
-  return message.reply("<:CC_xMark:1486569218789871626> **Failed** to fetch a valid **user ID** or **message**.");
+  return message.reply("<:Sea_xMark:1486977010143199382> **Failed** to fetch a valid **user ID** or **message**.");
 }
 
 let user;
 try {
   user = await message.client.users.fetch(userId);
 } catch (err) {
-  return message.reply("<:CC_xMark:1486569218789871626> Failed to **fetch** a **valid** user ID.");
+  return message.reply("<:Sea_xMark:1486977010143199382> Failed to **fetch** a **valid** user ID.");
 }
 
 // optional ActionRow (not required if using your raw components)
@@ -119,10 +119,10 @@ try {
     }).catch(() => {});
   }
 
-  return message.reply(`<:CC_check:1486569243884650606> **Successfully** sent message to <@${userId}>.`);
+  return message.reply(`<:Sea_Check:1486976983555379330> **Successfully** sent message to <@${userId}>.`);
 } catch (err) {
   console.error("DM command error:", err);
-  return message.reply("<:CC_xMark:1486569218789871626> **Failed** to **message** user.");
+  return message.reply("<:Sea_xMark:1486977010143199382> **Failed** to **message** user.");
 }
 
   }

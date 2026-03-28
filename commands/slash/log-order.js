@@ -51,7 +51,7 @@ module.exports = {
       !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
     ) {
       return interaction.reply({
-        content: "<:xMark:1486977010143199382> You do **not** have **permission** to run this command.",
+        content: "<:Sea_xMark:1486977010143199382> You do **not** have **permission** to run this command.",
         ephemeral: true
       });
     }
@@ -68,7 +68,7 @@ module.exports = {
 
     if (!channel) {
       return interaction.reply({
-        content: "<:CC_xMark:1486569218789871626> **Failed** to **cache** the log channel.",
+        content: "<:Sea_xMark:1486977010143199382> **Failed** to **cache** the log channel.",
         ephemeral: true
       });
     }
@@ -133,7 +133,7 @@ module.exports = {
 });
 
     await interaction.reply({
-      content: "<:CC_check:1486569243884650606> **Successfully** logged order.",
+      content: "<:Sea_Check:1486976983555379330> **Successfully** logged order.",
       ephemeral: true
     });
   }

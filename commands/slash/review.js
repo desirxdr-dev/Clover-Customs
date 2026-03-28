@@ -10,6 +10,21 @@ module.exports = {
         .setDescription("Select the designer who completed your order.")
         .setRequired(true)
     )
+
+    .addStringOption(option =>
+      option
+      .setName("product")
+      .setDescription("Select the product you ordered.")
+      .setRequired(true)
+      .addChoices(
+        { name: "Graphics", value: "Graphics" },
+        { name: "Liveries", value: "Liveries" },
+        { name: "Clothing", value: "Clothing" },
+        { name: "Discord", value: "Discord"},
+        { name: "Development", value: "Development"},
+        { name: "Course", value: "Course" }
+      )
+    )
     .addStringOption(option =>
       option
         .setName("rating")
@@ -23,6 +38,7 @@ module.exports = {
           { name: "⭐⭐⭐⭐⭐", value: "⭐⭐⭐⭐⭐" }
         )
     )
+    
     .addStringOption(option =>
       option
         .setName("feedback")
@@ -46,6 +62,7 @@ module.exports = {
 
 
     const designer = interaction.options.getUser("designer");
+    const product = interaction.options.getString("product");
     const rating = interaction.options.getString("rating");
     const feedback = interaction.options.getString("feedback");
 
@@ -82,7 +99,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": `**Rating:** ${rating}\n**Feedback:** ${feedback}`
+          "content": `**Product:** ${product}\n**Rating:** ${rating}\n**Feedback:** ${feedback}`
         },
         {
           "type": 14,
@@ -90,7 +107,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": "Thank you for ordering with **Clover Customs**. We hope you enjoy your order experience with us."
+          "content": "Thank you for leaving a review at **Sea Customs**. We hope you enjoyed your experience with us."
         },
         {
           "type": 14,

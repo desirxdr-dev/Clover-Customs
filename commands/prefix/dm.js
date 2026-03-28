@@ -78,7 +78,7 @@ try {
             items: [
               {
                 media: {
-                  url: "https://media.discordapp.net/attachments/1486558722338852904/1486559089571139685/25.png?ex=69c5f189&is=69c4a009&hm=b96edcbdf8c58933c9e7f3664b8ce51248e891e5614b56fc01241cc12f19610b&=&format=webp&quality=lossless"
+                  url: "https://media.discordapp.net/attachments/1486918779668529243/1486964125367275712/image.png?ex=69c8bc41&is=69c76ac1&hm=db3ba6119aa9bb96efa9039a5a7179faf389434c4101e04a1155464e9600a87e&=&format=webp&quality=lossless"
                 }
               }
             ]

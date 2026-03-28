@@ -54,7 +54,7 @@ try {
           {
             type: 10,
             content:
-              "A message has been sent to you by our **Directive Team**. Ensure to reply as soon as possible if prompted to. Use the button below to reply."
+              "A message has been sent to you by our **Executive Team**. Ensure to reply as soon as possible if prompted to. Use the button below to reply."
           },
           { type: 14, divider: false },
           {

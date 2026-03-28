@@ -11,7 +11,7 @@ module.exports = {
   async execute(message, args) {
     if (message.author.bot) return;
 
-    const REQUIRED_ROLE_ID = "1470287418971258920";
+    const REQUIRED_ROLE_ID = "1466268852647235604";
 const LOG_CHANNEL_ID = "1466314007714594856";
 
 const isAdmin = message.member.permissions.has(PermissionsBitField.Flags.Administrator);

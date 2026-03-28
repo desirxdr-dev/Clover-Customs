@@ -13,7 +13,7 @@ function saveRemovedRoles(data) {
 }
 
 module.exports = {
-  name: "revert",
+  name: "restore",
 
   async execute(message, args) {
 

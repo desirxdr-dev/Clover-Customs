@@ -150,7 +150,8 @@ try {
   ]
 });
 
-      return interaction.reply(`<:Sea_Check:1486976983555379330> **Successfully** issued infraction **#${id}**.`);
+      return interaction.reply({ content: `<:Sea_Check:1486976983555379330> **Successfully** issued infraction **#${id}**.`,
+      ephemeral: true});
     }
 
     if (sub === "view") {

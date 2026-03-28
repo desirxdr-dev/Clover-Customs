@@ -1,3 +1,17 @@
+const fs = require("fs");
+const path = require("path");
+
+const DATA_FILE = path.join(__dirname, "..", "..", "removedRoles.json");
+
+function loadRemovedRoles() {
+  if (!fs.existsSync(DATA_FILE)) return {};
+  return JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
+}
+
+function saveRemovedRoles(data) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+}
+
 module.exports = {
   name: "remove",
 
@@ -6,7 +20,7 @@ module.exports = {
     if (message.author.bot) return;
 
     // 🔹 REQUIRED ROLE
-    const REQUIRED_ROLE_ID = "1471741614463520868";
+    const REQUIRED_ROLE_ID = "1466269101260411013";
 
     // 🔹 STAFF ROLES TO REMOVE
     const STAFF_ROLE_IDS = [
@@ -44,7 +58,6 @@ module.exports = {
       "1466311593666281690",
       "1466311581158740115",
       "1466311594316398755"
-
     ];
 
     // 🔹 LOG CHANNEL
@@ -92,6 +105,16 @@ module.exports = {
 
     try {
 
+      const removedRolesData = loadRemovedRoles();
+
+      removedRolesData[target.id] = {
+        roles: rolesToRemove,
+        removedBy: message.author.id,
+        removedAt: Date.now()
+      };
+
+      saveRemovedRoles(removedRolesData);
+
       await target.roles.remove(rolesToRemove);
 
       // optional nickname reset
@@ -104,19 +127,19 @@ module.exports = {
 
       if (logChannel) {
         await logChannel.send({
-  "flags": 32768,
-  "components": [
-    {
-      "type": 17,
-      "components": [
-        {
-          "type": 10,
-          "content": `${target} (\`${target.id}\`) has been **removed** as an employee at **Sea Customs**.`
-        }
-      ]
-    }
-  ]
-});
+          "flags": 32768,
+          "components": [
+            {
+              "type": 17,
+              "components": [
+                {
+                  "type": 10,
+                  "content": `${target} (\`${target.id}\`) has been **removed** as an employee at **Sea Customs**.`
+                }
+              ]
+            }
+          ]
+        });
       }
 
       // 🧹 delete command
@@ -124,7 +147,10 @@ module.exports = {
         await message.delete();
       } catch {}
 
-      target.send("<:Sea_Arrow:1487544861199564870> You have been **removed** from the **Staff Team**.")
+      try {
+        await target.send("<:Sea_Arrow:1487544861199564870> You have been **removed** from the **Staff Team**.");
+      } catch {}
+
       // ✅ confirmation
       await message.channel.send(
         `<:Sea_Check:1486976983555379330> **Successfully** removed ${target} from the staff team.`
